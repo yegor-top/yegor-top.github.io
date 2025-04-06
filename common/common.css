@@ -72,3 +72,22 @@
     margin-top: 8px;
     text-align: center;
 }
+
+#resetButton {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    display: none;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 4px 4px 0px #000;
+    color: #000;
+}
+#resetButton:hover {
+    background-color: #ffb800;
+}
