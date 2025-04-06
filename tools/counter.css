@@ -1,0 +1,161 @@
+@import "../common/common.css";
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    margin: 0;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.counter-container {
+    position: relative;
+    text-align: center;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+h1 {
+    color: #333;
+    font-size: 18px;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.counter {
+    font-size: 96px;
+    margin: 20px 0;
+    color: #555;
+}
+
+.btn {
+    font-size: 18px;
+    padding: 15px 30px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #4caf50;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.btn-reset {
+    background-color: #f44336;
+}
+
+.btn-reset:hover {
+    background-color: #d32f2f;
+}
+
+.add-btn {
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #2196f3;
+    border: none;
+    border-radius: 12px;
+}
+
+.add-btn:hover {
+    background-color: #1976d2;
+}
+
+.counter-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.modal input {
+    padding: 10px;
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.modal button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.modal button:hover {
+    background-color: #45a049;
+}
+
+.modal-close {
+    background-color: #f44336;
+}
+
+.modal-close:hover {
+    background-color: #d32f2f;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Counter</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="counter.css"/>
+    <script src="counter.js"></script>
+</head>
+<body>
+<div class="counter-row" id="counterRow">
+    <div class="counter-container" id="counter1">
+        <h1>Counter</h1>
+        <div class="counter" id="counterValue1">0</div>
+        <button class="btn" onclick="increment(1)">+</button>
+        <button class="btn" onclick="decrement(1)">-</button>
+        <button class="btn btn-reset" onclick="reset(1)">Reset</button>
+        <button class="delete-btn" onclick="deleteCounter(1)">X</button>
+    </div>
+</div>
+<button class="add-btn" onclick="openModal()">Add New Counter</button>
+
+<div class="modal" id="nameModal">
+    <div class="modal-content">
+        <h2>Enter a name for the new counter</h2>
+        <label for="counterNameInput"></label>
+        <div><input type="text" id="counterNameInput" placeholder="Counter Name"></div>
+        <button onclick="addNewCounter()">Add Counter</button>
+        <button class="modal-close" onclick="closeModal()">Cancel</button>
+    </div>
+</div>
+
+<a href="tools.html" class="back-button">Back to menu</a>
+
+</body>
+</html>
