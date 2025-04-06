@@ -63,7 +63,7 @@ function updatePlayer() {
         playerVelocityY = 0;
     }
 
-    if (keys[' '] && !isJumping) {
+    if ((keys[' '] || keys['ArrowUp']) && !isJumping) {
         isJumping = true;
         playerVelocityY = jumpPower; // Высота прыжка остаётся постоянной
     }
@@ -244,7 +244,8 @@ setInterval(createClouds, 100);
 
 setInterval(() => {
     if (!isGameOver) {
-        speedMultiplier *= 1.01; // Увеличение на 1% каждые 10 секунд
+        speedMultiplier *= 1.01;
     }
 }, speedIncrementInterval);
+
 gameLoop();
