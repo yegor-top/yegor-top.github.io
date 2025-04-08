@@ -1,3 +1,5 @@
+@import "../common/common.css";
+
 body {
     margin: 0;
     padding: 20px;
@@ -51,7 +53,7 @@ body {
 
 .number {
     margin-top: 20px;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
 }
 

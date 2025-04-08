@@ -91,3 +91,19 @@
 #resetButton:hover {
     background-color: #ffb800;
 }
+
+#add-Btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#add-Btn:hover {
+    background-color: #218838;
+}

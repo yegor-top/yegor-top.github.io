@@ -4,7 +4,6 @@ function createCalculator() {
     let calculator = document.createElement("div");
     calculator.classList.add("calculator");
 
-    // Создаем кнопку удаления
     let deleteButton = document.createElement("button");
     deleteButton.classList.add("btn", "delete-btn");
     deleteButton.textContent = "X";
@@ -94,4 +93,4 @@ function handleKeyPress(event, display) {
     }
 }
 
-document.getElementById("addCalculatorBtn").addEventListener("click", createCalculator);
+document.getElementById("add-Btn").addEventListener("click", createCalculator);

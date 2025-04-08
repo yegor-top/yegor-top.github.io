@@ -5,9 +5,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
     background-color: #f4f4f9;
-    margin: 0;
+    margin: 20px;
     flex-direction: column;
     overflow: auto;
 }
@@ -64,19 +64,6 @@ h1 {
 
 .btn-reset:hover {
     background-color: #d32f2f;
-}
-
-.add-btn {
-    margin-top: 20px;
-    font-size: 20px;
-    padding: 10px 20px;
-    background-color: #2196f3;
-    border: none;
-    border-radius: 12px;
-}
-
-.add-btn:hover {
-    background-color: #1976d2;
 }
 
 .counter-row {

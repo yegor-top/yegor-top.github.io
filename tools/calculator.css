@@ -9,22 +9,6 @@ body {
     background-color: yellowgreen;
 }
 
-#addCalculatorBtn {
-    padding: 10px 20px;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    cursor: pointer;
-    border: none;
-    background-color: #28a745;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-#addCalculatorBtn:hover {
-    background-color: #218838;
-}
-
 .calculator {
     background-color: #cccccc;
     padding: 20px;
