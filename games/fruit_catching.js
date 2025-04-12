@@ -9,6 +9,21 @@ canvas.height = window.innerHeight;
 const groundHeight = 50;
 let player, apples, obstacles, score, gameOver;
 
+// Load personal high score
+function getUserId() {
+    let userId = localStorage.getItem('userId');
+    if (!userId) {
+        userId = 'user_' + Math.random().toString(36).substr(2, 9);
+        localStorage.setItem('userId', userId);
+    }
+    return userId;
+}
+
+const userId = getUserId();
+let highScore = localStorage.getItem(`highScore_${userId}`)
+    ? parseInt(localStorage.getItem(`highScore_${userId}`))
+    : 0;
+
 function initGame() {
     player = {
         x: canvas.width / 2 - 25,
@@ -23,7 +38,7 @@ function initGame() {
     obstacles = [];
     score = 0;
     gameOver = false;
-    scoreDisplay.textContent = "Score: 0";
+    scoreDisplay.textContent = `Score: 0 | High Score: ${highScore}`;
     gameOverText.style.display = "none";
     resetButton.style.display = "none";
 }
@@ -67,7 +82,7 @@ function updateApples() {
         ) {
             apples.splice(index, 1);
             score++;
-            scoreDisplay.textContent = "Score: " + score;
+            scoreDisplay.textContent = `Score: ${score} | High Score: ${highScore}`;
         }
     });
 }
@@ -86,6 +101,11 @@ function updateObstacles() {
             gameOver = true;
             gameOverText.style.display = "block";
             resetButton.style.display = "block";
+            if (score > highScore) {
+                highScore = score;
+                localStorage.setItem(`highScore_${userId}`, highScore);
+            }
+            scoreDisplay.textContent = `Score: ${score} | High Score: ${highScore}`;
         }
     });
 }
