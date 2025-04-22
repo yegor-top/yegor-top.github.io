@@ -5,8 +5,8 @@ canvas.height = window.innerHeight;
 
 let playerX = 200;
 let playerY = canvas.height - 100;
-let gravity = 0.5;
-let jumpPower = -18; // Constant jump power
+let gravity = 0.8;
+let jumpPower = -30; // Constant jump power
 let isJumping = false;
 let playerVelocityY = 0;
 let groundHeight = 50;
@@ -174,13 +174,9 @@ function checkCollisions() {
                 playerX + 50 > obstacle.x &&
                 playerX < obstacle.x + obstacle.size &&
                 playerY + 50 > obstacle.y &&
-                playerY < obstacle.y + obstacle.size
+                playerY < obstacle.y
             ) {
-                let triangleTopY = obstacle.y - obstacle.size + 10;
-
-                if (playerY <= triangleTopY) {
-                    gameOver();
-                }
+                gameOver();
             }
         }
     });
